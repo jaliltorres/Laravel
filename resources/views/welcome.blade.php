@@ -41,6 +41,10 @@
       padding: 15px;
     }
 
+    img{
+      max-width: 100%;
+    }
+
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
 
@@ -68,9 +72,7 @@
 </head>
 <body>
   <header class="container-fluid text-center">
-        <p style="font: 14px/17px serif; margin-bottom: 20px; text-align: center;">
         <img src="{{ asset ('images/header.png') }}">
-        </p>
 	</header>
 <nav class="navbar">
 </nav>
@@ -106,41 +108,7 @@
         <h4 style="font-family: Raleway;">¿ Aún no tienes
           <br> cuenta ?</h4>
           <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal">Registrate</button>
-
-      <!-- Modal -->
-        <div class="modal fade" id="myModal" role="form">
-        <div class="modal-dialog">
-
-          <!-- Modal content-->
-        <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" style="color: #c72020;">Nuevo Registro</h4>
-        </div>
-        <div class="modal-body">
-           <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-sm-2 control-label">Email: </label>
-            <div class="col-sm-10">
-            <input class="form-control" id="focusedInput" type="text" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-2 control-label">Contrasena: </label>
-          <div class="col-sm-10">
-          <input class="form-control" id="focusedpass" type="password" placeholder="Contrasena">
-        </div>
-      </div>
-        </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Crear Usuario</button>
-        </div>
-        </div>
-
-    </div>
-  </div>
+    <a type="button" class="btn btn-danger btn-md"  href="/registro_egresado">Registrate</a>
       </div>
 
       <div class="row">
@@ -185,16 +153,6 @@
            <img src="{{ asset ('images/slide4.jpg') }}"  alt="London" width="600" height="200" style="border: 2px transparent; border-radius: 20px;">
          </div>
        </div>
-
-       <!-- Left and right controls
-       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-         <span class="sr-only">Previous</span>
-       </a>
-       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-         <span class="sr-only">Next</span>
-       </a> -->
      </div>
     <hr>
 

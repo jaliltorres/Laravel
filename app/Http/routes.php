@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/registro_egresado', function () {
+    return view('registro_egresado');
+});
+
+Route::get('/registro_empresa', function () {
+    return view('registro_empresa');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
