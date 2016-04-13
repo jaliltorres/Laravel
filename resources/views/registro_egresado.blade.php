@@ -1,7 +1,7 @@
 @extends('layout.layoutbase')
 
 @section('head')
-<title>Egresados - Registro</title>
+<title>Registro - Egresado</title>
 @stop
 
 @section('content')
@@ -14,121 +14,162 @@
 <br>
 
   <div class="col-sm-12" align="center">
-    <form class="col-sm-12 form-horizontal" role="form">
-        <div class="form-group">
-          <label class="control-label col-sm-4" for="nombre">Nombre(s):</label>
-          <div class="col-sm-5">
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre(s)">
-          </div>
-      </div>
+    {!! Form::open( ['class' => 'col-sm-12 form-horizontal', 'role' => 'form'] )  !!}
       <div class="form-group">
-        <label class="control-label col-sm-4" for="apepat">Paterno:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="apepat" placeholder="Apellido paterno">
-        </div>
-        <label class="control-label col-sm-1" for="apemat">Materno:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="apemat" placeholder="Apellido materno">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="celular">Celular:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="celular" placeholder="722  XXX XXXX">
-        </div>
-        <label class="control-label col-sm-1" for="correo">Correo:</label>
-        <div class="col-sm-2">
-          <input type="email" class="form-control" id="correo" placeholder="correo@jamones.com">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="celular">Carrera:</label>
-        <div class="col-sm-2">
-          <select multiple class="form-control input-sm" name="carrera" id="carrera">
-            <option value="0">Ingeniería</option>
-            <option value="1">Ing. Gestión Empresarial</option>
-            <option value="2">Ing. Electrónica</option>
-            <option value="3">Ing. Sistemas Computacionales</option>
-            <option value="4">Ing. Química</option>
-            <option value="5">Ing. Electromecánica</option>
-            <option value="6">Ing. Mecatrónica</option>
-            <option value="7">Ing. Logística</option>
-            <option value="8">Ing. TICs</option>
-          </select>
-        </div>
-        <label class="control-label col-sm-1" for="correo">Egreso:</label>
-        <div class="col-sm-2">
-          <select multiple class="form-control input-sm" name="egreso" id="anio_egreso">
-            <option value="0">Año de Egreso</option>
-            <option value="1">1980</option>
-            <option value="2">1981</option>
-            <option value="3">1982</option>
-            <option value="4">1983</option>
-            <option value="5">1984</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="maestria">Maestría:</label>
+          {!! Form::label( 'correo', 'Correo:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-5">
-          <input type="text" class="form-control" id="maestria" placeholder="Ma. en XXXXX">
+          {!! Form::email( 'correo', null, ['class' => 'form-control'] ) !!}
         </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-4" for="pais">Pais:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="pais">
-      </div>
-      <label class="control-label col-sm-1" for="estado">Estado:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="estado">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-4" for="municipio">Municipio:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="municipio">
-      </div>
-      <label class="control-label col-sm-1" for="colonia">Colonia:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="colonia">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-4" for="calle">Calle y No:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="calle">
-      </div>
-      <label class="control-label col-sm-1" for="cp">CP:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="cp" placeholder="500XX...">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-4" for="contraseña">Contraseña:</label>
+        {!! Form::label( 'contrasena', 'Contraseña:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
       <div class="col-sm-5">
-        <input type="password" class="form-control" id="contraseña" placeholder="********">
+        {!! Form::password( 'contrasena', ['class' => 'form-control', 'maxlength' => '12'] ) !!}
       </div>
   </div>
   <div class="form-group">
-    <label class="control-label col-sm-4" for="repcontraseña">Repetir Contraseña:</label>
+      {!! Form::label( 'confcontrasena', 'Confirmar Contraseña:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
     <div class="col-sm-5">
-      <input type="password" class="form-control" id="repcontraseña" placeholder="********">
+      {!! Form::password( 'confcontrasena', ['class' => 'form-control', 'maxlength' => '12'] ) !!}
     </div>
 </div>
+    <hr style="height: 2px; width:50%; background-color: #c72020;">
+        <div class="form-group">
+          {!! Form::label( 'nombre', 'Nombre(s):', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+          <div class="col-sm-5">
+            {!! Form::text( 'nombre', null, ['class' => 'form-control'] ) !!}
+          </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'apaterno', 'A. Paterno:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::text( 'apaterno', null, ['class' => 'form-control'] ) !!}
+        </div>
+            {!! Form::label( 'amaterno', 'A. Materno:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+    <div class="col-sm-2">
+            {!! Form::text( 'amaterno', null, ['class' => 'form-control'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'nocontrol', 'No. Control:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::text( 'nocontrol', null, ['class' => 'form-control', 'maxlength' => '8'] ) !!}
+        </div>
+            {!! Form::label( 'nacimiento', 'Nacimiento:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+    <div class="col-sm-2">
+            {!! Form::date( 'nocontrol', null, ['class' => 'form-control'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'genero', 'Género:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::select( 'type', array('1' => 'Masculino', '2' => 'Femenino'), null, ['class' => 'form-control input-sm', 'id' => 'genero', 'placeholder' => 'Selecciona Género'] ) !!}
+        </div>
+            {!! Form::label( 'ecivil', 'E. Civil:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+    <div class="col-sm-2">
+            {!! Form::select( 'type', array('1' => 'Soltero', '2' => 'Casado', '3' => 'Divorciado'), null, ['class' => 'form-control input-sm', 'id' => 'ecivil', 'placeholder' => 'Selecciona Estado Civil'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'celular', 'No. Celular:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::text( 'celular', null, ['class' => 'form-control', 'maxlength' => '10'] ) !!}
+        </div>
+            {!! Form::label( 'fijo', 'No. Fijo:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+    <div class="col-sm-2">
+            {!! Form::date( 'fijo', null, ['class' => 'form-control', 'maxlength' => '7'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'anioegreso', 'Egreso  Año:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::selectRange( 'number', 1980, 2016, null, ['class' => 'form-control input-sm', 'id' => 'anioegreso', 'placeholder' => 'Selecciona Año de Egreso']) !!}
+        </div>
+            {!! Form::label( 'mesegreso', 'Mes:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+    <div class="col-sm-2">
+            {!! Form::select( 'month',  $meses, null, ['class' => 'form-control input-sm', 'id' => 'mesegreso', 'placeholder' => 'Selecciona Mes de Egreso'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+          {!! Form::label( 'carrera', 'Carrera:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-5">
+          {!! Form::select( 'type', array(
+          '1' => 'Ing. Gestion Empresarial',
+          '2' => 'Ing. Electronica',
+          '3' => 'Ing. Sistemas Computacionales',
+          '4' => 'Ing. Quimica',
+          '5' => 'Ing. Electromecanica',
+          '6' => 'Ing. Mecatronica',
+          '7' => 'Ing. Logistica',
+          '8' => 'Ing. TICs'), null, ['multiple class' => 'form-control input-sm', 'id' => 'carrera', 'placeholder' => 'Selecciona tu Carrera'] ) !!}
+        </div>
+      </div>
+      <div class="form-group">
+            {!! Form::label( 'titulado', 'Titulado:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-2">
+            {!! Form::select( 'type', array('0' => 'No', '1'  => 'Si' ), null, ['class' => 'form-control input-sm', 'id' => 'titulado', 'placeholder' => 'Selecciona Status']) !!}
+        </div>
+
+      </div>
+      <hr style="height: 2px; width:50%; background-color: #c72020;">
+    <div class="form-group">
+        {!! Form::label( 'colonia', 'Colonia:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'colonia', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'calle', 'Calle:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'calle', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'numext', 'No. Ext:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'numext', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'numint', 'No. Int:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'numint', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'municipio', 'Municipio:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'municipio', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'cp', 'C.P:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'cp', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'estado', 'Estado:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'estado', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'pais', 'País:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'pais', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+      {!! Form::label( 'referencias', 'Referencias:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-5">
+        {!! Form::textarea( 'referencias', null, ['class' => 'form-control', 'rows' => '2' ] ) !!}
+      </div>
+  </div>
       <br>
       <br>
         <div class="col-sm-offset-5 col-sm-2" align="center">
-          <button type="submit" class="btn btn-danger btn-lg btn-block" align="center">Registrar</button>
+          {!! Form::button( 'Registrar', ['type' => 'submit', 'class' => 'btn btn-danger btn-lg btn-block', 'align' => 'center'] ) !!}
         </div>
-  </form>
+    {!! Form::close() !!}
 
   </div>
 
       <div class="col-sm-12" align="center">
         <hr style="height: 2px; width:50%; background-color: #c72020;">
       </div>
-
 
 @stop
 

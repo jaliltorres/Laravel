@@ -23,6 +23,14 @@ Route::get('/registro_empresa', function () {
     return view('registro_empresa');
 });
 
+Route::get('asco', 'EgresadoController@create');
+
+Route::post('asco', 'EgresadoController@store');
+
+Route::get('mostrar', 'EgresadoController@show');
+
+Route::get('registro_egresado', 'EgresadoController@mes');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

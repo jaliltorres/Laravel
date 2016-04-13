@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
@@ -31,6 +33,11 @@
       padding-top: 20px;
       padding-bottom: 30px;
       height: 100%;
+    }
+
+    .alinear{
+      padding-top: 5px;
+      text-align: right;
     }
 
     /* Set black background color, white text and some padding */
