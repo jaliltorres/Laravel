@@ -13,28 +13,9 @@
   </div>
 <br>
 
-<div class="table table-responsive">
-  <table class="table table-striped">
-<thead>
-  <tr>
-    <th>Nombre</th>
-    <th>Apellido Paterno</th>
-    <th>Apellido Marteno</th>
-  </tr>
-</thead>
-<tbody>
-
-      <?php foreach ($egresados as $egresado):  ?>
-  <tr>
-    <td><?=$egresado['nombre']?></td>
-    <td><?=$egresado['paterno']?></td>
-    <td><?=$egresado['materno']?></td>
-  </tr>
-    <?php endforeach ?>
-
-</tbody>
-</table>
-</div>
+<p>
+  Se hizo el registro
+</p>
 
 
         <div class="col-sm-12" align="center">

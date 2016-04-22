@@ -15,7 +15,6 @@ class CreatePerfilesTable extends Migration
         Schema::create('perfiles', function (Blueprint $table) {
           $table->string('Id_ClavePerfil', 20)->unique();
           $table->string('Desc_Perfil', 50);
-          $table->primary('Id_ClavePerfil');
           $table->timestamps();
         });
     }

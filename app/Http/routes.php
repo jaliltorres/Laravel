@@ -23,13 +23,16 @@ Route::get('/registro_empresa', function () {
     return view('registro_empresa');
 });
 
-Route::get('asco', 'EgresadoController@create');
+Route::get('registro_egresado', 'EgresadoController@create');
 
-Route::post('asco', 'EgresadoController@store');
+Route::post('registro_egresado', 'EgresadoController@store');
 
 Route::get('mostrar', 'EgresadoController@show');
 
 Route::get('registro_egresado', 'EgresadoController@mes');
+
+Route::get('registro_empresa', 'EmpresaController@create');
+Route::post('registro_empresa', 'EmpresaController@store');
 
 /*
 |--------------------------------------------------------------------------

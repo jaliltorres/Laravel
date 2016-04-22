@@ -57,17 +57,22 @@
         </div>
             {!! Form::label( 'nacimiento', 'Nacimiento:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
     <div class="col-sm-2">
-            {!! Form::date( 'nocontrol', null, ['class' => 'form-control'] ) !!}
+        <div class="input-group date">
+              {!! Form::text('nacimiento', null, ['class' => 'form-control', 'id' => 'datepicker'] ) !!}
+        <div class="input-group-addon">
+          <span class="glyphicon glyphicon-calendar"></span>
+        </div>
+      </div>
         </div>
       </div>
       <div class="form-group">
             {!! Form::label( 'genero', 'Género:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-2">
-            {!! Form::select( 'type', array('1' => 'Masculino', '2' => 'Femenino'), null, ['class' => 'form-control input-sm', 'id' => 'genero', 'placeholder' => 'Selecciona Género'] ) !!}
+            {!! Form::select( 'genero', array('Ma' => 'Masculino', 'Fe' => 'Femenino'), null, ['class' => 'form-control input-sm', 'id' => 'genero', 'placeholder' => 'Selecciona Género'] ) !!}
         </div>
             {!! Form::label( 'ecivil', 'E. Civil:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
     <div class="col-sm-2">
-            {!! Form::select( 'type', array('1' => 'Soltero', '2' => 'Casado', '3' => 'Divorciado'), null, ['class' => 'form-control input-sm', 'id' => 'ecivil', 'placeholder' => 'Selecciona Estado Civil'] ) !!}
+            {!! Form::select( 'ecivil', array('1' => 'Soltero', '2' => 'Casado', '3' => 'Divorciado'), null, ['class' => 'form-control input-sm', 'id' => 'ecivil', 'placeholder' => 'Selecciona Estado Civil'] ) !!}
         </div>
       </div>
       <div class="form-group">
@@ -77,28 +82,28 @@
         </div>
             {!! Form::label( 'fijo', 'No. Fijo:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
     <div class="col-sm-2">
-            {!! Form::date( 'fijo', null, ['class' => 'form-control', 'maxlength' => '7'] ) !!}
+            {!! Form::text( 'fijo', null, ['class' => 'form-control', 'maxlength' => '7'] ) !!}
         </div>
       </div>
       <div class="form-group">
             {!! Form::label( 'anioegreso', 'Egreso  Año:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-2">
-            {!! Form::selectRange( 'number', 1980, 2016, null, ['class' => 'form-control input-sm', 'id' => 'anioegreso', 'placeholder' => 'Selecciona Año de Egreso']) !!}
+            {!! Form::selectRange( 'anioegreso', 1980, 2016, null, ['class' => 'form-control input-sm', 'id' => 'anioegreso', 'placeholder' => 'Selecciona Año de Egreso']) !!}
         </div>
             {!! Form::label( 'mesegreso', 'Mes:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
     <div class="col-sm-2">
-            {!! Form::select( 'month',  $meses, null, ['class' => 'form-control input-sm', 'id' => 'mesegreso', 'placeholder' => 'Selecciona Mes de Egreso'] ) !!}
+            {!! Form::select( 'mesegreso',  $meses, null, ['class' => 'form-control input-sm', 'id' => 'mesegreso', 'placeholder' => 'Selecciona Mes de Egreso'] ) !!}
         </div>
       </div>
       <div class="form-group">
           {!! Form::label( 'carrera', 'Carrera:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-5">
-          {!! Form::select( 'type', array(
-          '1' => 'Ing. Gestion Empresarial',
+          {!! Form::select( 'carrera', array(
+          '1' => 'Ing. Electromecanica',
           '2' => 'Ing. Electronica',
           '3' => 'Ing. Sistemas Computacionales',
           '4' => 'Ing. Quimica',
-          '5' => 'Ing. Electromecanica',
+          '5' => 'Ing. Gestion Empresarial',
           '6' => 'Ing. Mecatronica',
           '7' => 'Ing. Logistica',
           '8' => 'Ing. TICs'), null, ['multiple class' => 'form-control input-sm', 'id' => 'carrera', 'placeholder' => 'Selecciona tu Carrera'] ) !!}
@@ -107,7 +112,7 @@
       <div class="form-group">
             {!! Form::label( 'titulado', 'Titulado:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-2">
-            {!! Form::select( 'type', array('0' => 'No', '1'  => 'Si' ), null, ['class' => 'form-control input-sm', 'id' => 'titulado', 'placeholder' => 'Selecciona Status']) !!}
+            {!! Form::select( 'titulado', array('0' => 'No', '1'  => 'Si' ), null, ['class' => 'form-control input-sm', 'id' => 'titulado', 'placeholder' => 'Selecciona Status']) !!}
         </div>
 
       </div>

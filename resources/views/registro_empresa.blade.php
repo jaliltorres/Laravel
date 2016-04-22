@@ -15,115 +15,157 @@
 <br>
 
   <div class="col-sm-12" align="center">
-    <form class="col-sm-12 form-horizontal" role="form">
-        <div class="form-group">
-          <label class="control-label col-sm-4" for="nombrec">Nombre Comercial:</label>
-          <div class="col-sm-5">
-            <input type="text" class="form-control" id="nombrec">
-          </div>
-      </div>
+    {!! Form::open( ['class' => 'col-sm-12 form-horizontal', 'role' => 'form'] )  !!}
       <div class="form-group">
-        <label class="control-label col-sm-4" for="rsocial">Razón Social:</label>
+          {!! Form::label( 'nombre_em', 'Nombre Comercial:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-5">
-          <input type="text" class="form-control" id="rsocial">
+          {!! Form::text( 'nombre_em', null, ['class' => 'form-control'] ) !!}
         </div>
     </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="rfc">R.F.C:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="rfc">
-        </div>
-        <label class="control-label col-sm-1" for="pais">País:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="pais">
-        </div>
+    <div class="form-group">
+        {!! Form::label( 'correo', 'Correo Empresarial:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-5">
+        {!! Form::email( 'correo', null, ['class' => 'form-control'] ) !!}
       </div>
+  </div>
       <div class="form-group">
-        <label class="control-label col-sm-4" for="estado">Estado:</label>
+            {!! Form::label( 'tipo_produc', 'Producción         Tipo:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
         <div class="col-sm-2">
-          <input type="text" class="form-control" id="estado">
+            {!! Form::text( 'tipo_produc', null, ['class' => 'form-control'] ) !!}
         </div>
-        <label class="control-label col-sm-1" for="municipio">Municipio:</label>
+            {!! Form::label( 'giro_produc', 'Giro:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
         <div class="col-sm-2">
-          <input type="text" class="form-control" id="municipio">
+            {!! Form::text( 'giro_produc', null, ['class' => 'form-control'] ) !!}
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-4" for="colonia">Colonia:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="colonia">
+          {!! Form::label( 'raz_social', 'Razón Social:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+        <div class="col-sm-5">
+          {!! Form::text( 'raz_social', null, ['class' => 'form-control'] ) !!}
         </div>
-        <label class="control-label col-sm-1" for="calleno">Calle/No:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="calleno">
-        </div>
+    </div>
+    <div class="form-group">
+          {!! Form::label( 'telefono', 'Teléfono:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'telefono', null, ['class' => 'form-control'] ) !!}
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="cp">C.P:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="cp">
-        </div>
-        <label class="control-label col-sm-1" for="sector">Sector:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="sector">
-        </div>
+          {!! Form::label( 'web', 'Pag. Web:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'web', null, ['class' => 'form-control'] ) !!}
       </div>
-
-      <br>
-      <br>
-      <div class="col-sm-12" align="center">
-        <h5 align="center"><strong>DATOS DEL REPRESENTANTE</strong></h5>
-        <hr style="height: 2px; width:51%; background-color: #c72020;">
+    </div>
+    <div class="form-group">
+          {!! Form::label( 'tamanio', 'Tamaño:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'tamanio', null, ['class' => 'form-control'] ) !!}
       </div>
-
-      <div class="col-sm-12" align="center">
-        <form class="col-sm-12 form-horizontal" role="form">
-            <div class="form-group">
-              <label class="control-label col-sm-4" for="nombre">Nombre:</label>
-              <div class="col-sm-2">
-                <input type="text" class="form-control" id="nombre">
-              </div>
-              <label class="control-label col-sm-1" for="puesto">Puesto:</label>
-              <div class="col-sm-2">
-                <input type="text" class="form-control" id="puesto">
-          </div>
-        </div>
-          <div class="form-group">
-            <label class="control-label col-sm-4" for="email">Email:</label>
-            <div class="col-sm-2">
-              <input type="email" class="form-control" id="email">
-            </div>
-            <label class="control-label col-sm-1" for="tel">Teléfono:</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="tel">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="control-label col-sm-4" for="contraseña">Contraseña:</label>
-            <div class="col-sm-5">
-              <input type="password" class="form-control" id="contraseña">
-            </div>
-        </div>
-        <div class="form-group">
-          <label class="control-label col-sm-4" for="repcontraseña">Repetir Contraseña:</label>
-          <div class="col-sm-5">
-            <input type="password" class="form-control" id="repcontraseña">
-          </div>
+          {!! Form::label( 'rfc', 'R.F.C:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'rfc', null, ['class' => 'form-control'] ) !!}
       </div>
-            <br>
-            <br>
-              <div class="col-sm-offset-5 col-sm-2" align="center">
-                <button type="submit" class="btn btn-danger btn-lg btn-block" align="center">Registrar</button>
-              </div>
-        </form>
+    </div>
+    <br>
+    <br>
+    <div class="col-sm-12" align="center">
+      <h5 align="center"><strong>DATOS DE UBICACIÓN ( EMPRESA )</strong></h5>
+      <hr style="height: 2px; width:51%; background-color: #c72020;">
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'colonia', 'Colonia:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'colonia', null, ['class' => 'form-control'] ) !!}
       </div>
-
-      <div class="col-sm-12" align="center">
-        <hr style="height: 2px; width:50%; background-color: #c72020;">
+      {!! Form::label( 'calle', 'Calle:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'calle', null, ['class' => 'form-control'] ) !!}
       </div>
-
-
-    </form>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'numext', 'No. Ext:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'numext', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'numint', 'No. Int:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'numint', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'municipio', 'Municipio:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'municipio', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'cp', 'C.P:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'cp', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'estado', 'Estado:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+        {!! Form::text( 'estado', null, ['class' => 'form-control'] ) !!}
+      </div>
+      {!! Form::label( 'pais', 'País:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+      {!! Form::text( 'pais', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+      {!! Form::label( 'referencias', 'Referencias:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-5">
+        {!! Form::textarea( 'referencias', null, ['class' => 'form-control', 'rows' => '2' ] ) !!}
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="col-sm-12" align="center">
+      <h5 align="center"><strong>DATOS DEL REPRESENTANTE</strong></h5>
+      <hr style="height: 2px; width:51%; background-color: #c72020;">
+    </div>
+    <div class="form-group">
+          {!! Form::label( 'nombre_contac', 'Nombre:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'nombre_contac', null, ['class' => 'form-control'] ) !!}
+      </div>
+          {!! Form::label( 'puesto', 'Puesto:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'puesto', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+          {!! Form::label( 'telefono_contac', 'Teléfono:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'telefono_contac', null, ['class' => 'form-control'] ) !!}
+      </div>
+          {!! Form::label( 'extension', 'Extensión:', ['class' => 'form-control-label col-sm-1 alinear'] ) !!}
+      <div class="col-sm-2">
+          {!! Form::text( 'extension', null, ['class' => 'form-control'] ) !!}
+      </div>
+    </div>
+    <div class="form-group">
+        {!! Form::label( 'correo_contac', 'Correo:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+      <div class="col-sm-5">
+        {!! Form::email( 'correo_contac', null, ['class' => 'form-control'] ) !!}
+      </div>
+  </div>
+  <div class="form-group">
+      {!! Form::label( 'contrasena', 'Contraseña:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+    <div class="col-sm-5">
+      {!! Form::password( 'contrasena', ['class' => 'form-control', 'maxlength' => '12'] ) !!}
+    </div>
+</div>
+<div class="form-group">
+    {!! Form::label( 'confcontrasena', 'Confirmar Contraseña:', ['class' => 'form-control-label col-sm-4 alinear'] ) !!}
+  <div class="col-sm-5">
+    {!! Form::password( 'confcontrasena', ['class' => 'form-control', 'maxlength' => '12'] ) !!}
+  </div>
+</div>
+<br>
+<br>
+  <div class="col-sm-offset-5 col-sm-2" align="center">
+    {!! Form::button( 'Registrar', ['type' => 'submit', 'class' => 'btn btn-danger btn-lg btn-block', 'align' => 'center'] ) !!}
+  </div>
+    {!! Form::close() !!}
   </div>
 
 @endsection
